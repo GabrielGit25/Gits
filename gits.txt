@@ -1,0 +1,111 @@
+Commit para adicionar novo arquivo ao github
+
+
+# 1) Verifique o status e o remote
+git status
+git remote -v
+
+# 2) Adicionar o arquivo ao stage
+git add teste.txt
+# (ou adicionar todos: git add .)
+
+# 3) Criar o commit
+git commit -m "Adiciona teste.txt"
+
+# 4) Enviar para o GitHub (primeiro push desta branch)
+git push -u origin main
+# Em pushes seguintes só: git push
+
+---------------------------------------------------
+Commit para atualizar arquivos existentes no github
+
+# 1) Verifique o status e a branch atual
+git status
+git branch --show-current
+
+# 2) Puxe mudanças remotas antes (evita conflitos)
+git pull --rebase origin main
+
+# 3) Faça alterações no arquivo (ex.: src/index.ts)
+
+# 4) Adicione ao stage
+git add caminho/para/arquivo.ext
+# ou para interativo: git add -p
+# ou para tudo: git add .
+
+# 5) Crie o commit
+git commit -m "Mensagem descrevendo a alteração"
+
+# 6) Envie para o GitHub
+git push origin main
+# se for a primeira vez desta branch no remote: git push -u origin main
+
+----------------------------------------------------------------------------------------
+
+1. Atualizar main e criar a branch a partir dela
+
+git switch main
+git pull origin main
+git switch -c minha-feature
+
+
+2. Trabalhar na branch (editar arquivos) → preparar commit
+git status
+git add caminho/para/arquivo.ext       # ou git add .
+git commit -m "Descrição da mudança"
+
+-------------------------------------------------------------------------------------
+
+3. Publicar a branch no GitHub
+
+git push -u origin minha-feature
+
+-------------------------------------------------------------------------------------
+
+4. Continuar trabalhando: edit, add, commit, push
+
+# repetir:
+git add .
+git commit -m "Outra mudança"
+git push
+
+------------------------------------------------------------------------------------
+
+5. Excluir branch quando não for mais necessária
+
+# local
+git branch -d minha-feature
+
+# remoto
+git push origin --delete minha-feature
+
+------------------------------------------------------------------------------------
+Saber branch atual
+git branch --show-current
+
+-----------------------------------------------------------------------------------
+
+
+Transfeir arquivos para outro branch
+
+# Ver lista de branch
+git branch
+
+# Mudar de branch
+git checkout  nome_do_branch
+
+
+# adicionar arquivos na fila, stage
+ git add nome_do_arquivo
+
+# Crie um novo commit com as alterações.
+git commit -m "Mensagem de commit"
+
+# Mudar para  branch para onde deseja transferir os arquivos
+git checkout nome_do_branch
+
+ # mesclar as alterações do branch de origem no branch atual
+git merge nome_do_branch_de_origem 
+
+# Finalização
+git push
