@@ -108,4 +108,36 @@ git checkout nome_do_branch
 git merge nome_do_branch_de_origem 
 
 # Finalização
+
 git push
+
+-----------------------------------------------------------------------------------
+Clonar repositório Github online
+
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+------------------------------------------------------------------------------------
+Ver lista de repositórios remotos clonados associados ao repositório local
+git remote -v
+
+------------------------------------------------------------------------------------
+Alterar atual URL do repositório local pelo novo repositório
+
+git remote set-url origin https://github.com/novo-usuario/novo-repositorio.git
+
+Agora, todas as operações do Git, como push e pull, 
+serão executadas com base na nova URL do repositório remoto.
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
