@@ -1,6 +1,1 @@
-#!/bin/bash
-echo 'shazam() {
-  curl -s "https://raw.githubusercontent.com/GabrielGit25/Gits/main/gits.txt"
-}' >> ~/.bash_profile
-source ~/.bash_profile
-echo "✅ shazam instalado! Teste: shazam"
+echo 'shazam() { curl -s "https://raw.githubusercontent.com/GabrielGit25/Gits/main/gits.txt"; }' >> ~/.bash_profile && source ~/.bash_profile && echo "✅ shazam instalado!"
