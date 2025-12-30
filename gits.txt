@@ -79,6 +79,24 @@ git branch -d minha-feature
 # remoto
 git push origin --delete nome-branch
 
+-----------------------------------------------------------------------------------
+
+Cria nova branch
+
+# Certifique-se de estar na branch principal
+git checkout main
+
+# Crie uma nova branch a partir da branch atual
+git checkout -b feature-branch
+
+# Faça as alterações necessárias na nova branch
+
+# Confirme as alterações
+git commit -m "Adiciona nova funcionalidade"
+
+# Envie a nova branch para o repositório remoto
+git push origin feature-branch
+
 ------------------------------------------------------------------------------------
 Saber branch atual
 git branch --show-current
@@ -139,6 +157,7 @@ git remote set-url origin https://github.com/novo-usuario/novo-repositorio.git
 Agora, todas as operações do Git, como push e pull, 
 serão executadas com base na nova URL do repositório remoto.
 -------------------------------------------------------------------------------------
+
 
 
 
