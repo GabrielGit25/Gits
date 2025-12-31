@@ -119,6 +119,10 @@ git checkout  nome_do_branch
 # adicionar arquivos na fila, stage
  git add nome_do_arquivo
 
+# ou pelo caminho do diretório do arquivo
+git add "C:\Users\gabri\OneDrive\Desktop\pasta de novos arquivos\exemplo.txt"
+
+
 # Crie um novo commit com as alterações.
 git commit -m "Mensagem de commit"
 
@@ -158,17 +162,7 @@ Agora, todas as operações do Git, como push e pull,
 serão executadas com base na nova URL do repositório remoto.
 -------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Adicionar o novo repositório remoto
+git remote add origin <url_do_novo_repositório>
+-------------------------------------------------------------------------------------
 
