@@ -8,6 +8,17 @@ git remote -v
 # 2) Adicionar o arquivo ao stage
 git add teste.txt
 # (ou adicionar todos: git add .)
+ou
+# 2) Adicionar o arquivo pelo caminho da pasta ao stage
+cd "OneDrive/Desktop/pasta de novos arquivos"
+git add novo.txt
+
+# 2) Nome do arquivo sem espaço
+git add arquivo1.txt arquivo2.txt
+
+# 2) Nome do arquivo com espaço ""
+git add "novo arquivo.txt" "outro arquivo.txt"
+
 
 # 3) Criar o commit
 git commit -m "Adiciona teste.txt"
@@ -39,6 +50,21 @@ git commit -m "Mensagem descrevendo a alteração"
 # 6) Envie para o GitHub
 git push origin main
 # se for a primeira vez desta branch no remote: git push -u origin main
+
+----------------------------------------------------------------------------------------
+Commit para atualizar arquivos existentes no github pelo caminho da pasta
+
+1. Ir para a pasta 
+cd "C:\Users\gabri\Downloads\nova pastas de arquivos"
+git status
+git diff -- nome-do-arquivo.txt
+
+2. Stage + commit só do arquivo atualizado
+git add "nome-do-arquivo.txt"
+git commit -m "Atualiza nome-do-arquivo: descreva a mudança"
+
+3. git pull --rebase origin main   
+   git push origin main
 
 ----------------------------------------------------------------------------------------
 
@@ -120,7 +146,14 @@ git checkout  nome_do_branch
  git add nome_do_arquivo
 
 # ou pelo caminho do diretório do arquivo
-git add "C:\Users\gabri\OneDrive\Desktop\pasta de novos arquivos\exemplo.txt"
+cd "OneDrive/Desktop/pasta de novos arquivos"
+git add novo.txt
+
+Nome de arquivos sem espaço
+git add arquivo1.txt arquivo2.txt
+
+Nome de arquivos com espaços
+git add "novo arquivo.txt" "outro arquivo.txt"
 
 
 # Crie um novo commit com as alterações.
@@ -165,4 +198,5 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
