@@ -1,5 +1,14 @@
-Commit para adicionar novo arquivo ao github
+Remove repositório antigo para adicionar o repositório novo
 
+Set-Location -Path 'C:\Users\gabri'
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/GabrielGit25/url-novo.git
+git push -u origin main
+
+---------------------------------------------------
+
+Commit para adicionar novo arquivo ao github
 
 # 1) Verifique o status e o remote
 git status
@@ -198,5 +207,6 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
