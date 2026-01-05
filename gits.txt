@@ -53,6 +53,36 @@ git push -u origin main
 # Em pushes seguintes só: git push
 
 ---------------------------------------------------
+
+Atualizar mudanças de arquivos existentes localmente para o github
+
+1. Inicializou um novo repositório Git na pasta do seu projeto.
+ git init
+
+2. git add .
+Adicionar arquivos para à área de preparação (stage), prontos para serem salvos.
+
+3. Salvar as mudanças localmente com uma mensagem descrevendo o que foi feito.
+git commit -m "mensagem"
+
+4. Conectar repositório local ao repositório remoto no GitHub.
+git remote add origin https://github.com/GabrielGit25/projeto.git
+
+5. git branch -M main
+
+6. git push -u origin main --force
+
+
+!!!
+Agora que tudo está configurado, para os próximos envios você só precisará usar:
+
+1. git add .
+2. git commit -m "Sua mensagem"
+3. git push
+
+
+---------------------------------------------------
+
 Commit para atualizar arquivos existentes no github
 
 # 1) Verifique o status e a branch atual
@@ -223,6 +253,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
