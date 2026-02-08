@@ -24,33 +24,28 @@ git push -u origin main
 
 ---------------------------------------------------
 
-Commit para adicionar novo arquivo ao github
+Commit para adicionar novo arquivo ao github ou atualizar
 
-# 1) Verifique o status e o remote
+1. Verificar alterações
 git status
-git remote -v
 
-# 2) Adicionar o arquivo ao stage
-git add teste.txt
-# (ou adicionar todos: git add .)
-ou
-# 2) Adicionar o arquivo pelo caminho da pasta ao stage
-cd "OneDrive/Desktop/pasta de novos arquivos"
-git add novo.txt
+2. Adicionar arquivos modificados/novos (toda a pasta)
+git add .
 
-# 2) Nome do arquivo sem espaço
-git add arquivo1.txt arquivo2.txt
+3. Ou adicionar um arquivo específico
+git add caminho/para/arquivo.ext
 
-# 2) Nome do arquivo com espaço ""
-git add "novo arquivo.txt" "outro arquivo.txt"
+4. Fazer o commit com mensagem
+git commit -m "Mensagem descritiva sobre a mudança"
 
+5. Atualizar a branch local com o remoto (recomendado antes do push)
+git pull --rebase origin main
 
-# 3) Criar o commit
-git commit -m "Adiciona teste.txt"
+6. Enviar as mudanças para o GitHub
+git push origin main
 
-# 4) Enviar para o GitHub (primeiro push desta branch)
-git push -u origin main
-# Em pushes seguintes só: git push
+7. Se for a primeira vez que cria a branch local e quer criar a remota:
+git push -u origin nome-da-branch
 
 ---------------------------------------------------
 
@@ -253,6 +248,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
