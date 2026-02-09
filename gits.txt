@@ -47,6 +47,56 @@ git push origin main
 7. Se for a primeira vez que cria a branch local e quer criar a remota:
 git push -u origin nome-da-branch
 
+
+Resolução de falha
+Commit para adicionar novo arquivo ao github ou atualizar
+
+1. Inspeção inicial (status, branch, remoto, arquivo específico) 
+
+git status --porcelain
+git branch --show-current
+git remote -v
+git ls-files -- gv2.html
+git diff --name-only -- gv2.html
+git hash-object gv2.html
+git ls-tree HEAD gv2.html
+
+
+2. Adicionar e commitar a mudança localmente
+
+git add gv2.html
+git commit -m "Leve alteração: atualiza título em gv2.html"
+
+
+3. Tentar integrar o remoto (pull com rebase) e depois push
+
+git pull --rebase origin main
+git push origin main
+
+
+4. Stash incluindo não rastreados (tenta restaurar automaticamente)
+
+git stash push -u -m "temp stash before rebase"
+git pull --rebase origin main
+git stash pop
+# resolver conflitos se aparecerem
+git add .
+git commit -m "Resolve stash conflicts"
+git push origin main
+
+5. Se a árvore .git local estiver corrompida, ou houver problemas de permissão/paths (solução alternativa que eu usei): clonar remoto em diretório temporário, copiar o arquivo modificado, commitar e push a partir do clone
+
+git clone https://github.com/GabrielGit25/projeto-url.git repo-temp-push
+Copy-Item .\gv2.html .\repo-temp-push\gv2.html -Force
+Set-Location .\repo-temp-push
+git status --porcelain
+git add gv2.html
+git commit -m "Leve alteração: atualiza título em gv2.html"
+git push origin main
+
+6. Deletar o diretório temporário.
+Remove-Item -Recurse -Force "C:\Users\gabri\Downloads\caminho/pasta"
+
 ---------------------------------------------------
 
 Atualizar mudanças de arquivos existentes localmente para o github
@@ -248,6 +298,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
