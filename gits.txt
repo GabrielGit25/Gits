@@ -29,9 +29,10 @@ Commit para adicionar novo arquivo ao github ou atualizar
 1. garantir que está na pasta do projeto
 cd "C:\Users\usuarioNovo\Downloads\Gest-o-Ve-culos-VG-main\Gest-o-Ve-culos-VG-main"
 
-2. git init
+2.Baixar atualizações
+git pull origin main
 
-3. Verificar alterações
+3. Verificar o que mudou
 git status
 
 4. Adicionar arquivos modificados/novos (toda a pasta)
@@ -43,12 +44,8 @@ git add caminho/para/arquivo.ext
 6. Fazer o commit com mensagem
 git commit -m "Mensagem descritiva sobre a mudança"
 
-7. Ligar repositório ao repositório do GitHub 
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-
-8. Se o branch for main:
-git branch -M main
-git push -u origin main
+7. Enviar para o GitHub
+git push
 
 
 Resolução de falha
@@ -276,6 +273,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
