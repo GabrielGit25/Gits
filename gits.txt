@@ -249,6 +249,10 @@ Clonar repositório Github online
 
 git clone https://github.com/seu-usuario/seu-repositorio.git
 
+Conectar ao repositório no github. Quando já houver arquivos localmente na máquina
+
+git remote add origin https://github.com/GabrielGit25/url-novo.git
+
 ------------------------------------------------------------------------------------
 Ver lista de repositórios remotos clonados associados ao repositório local
 git remote -v
@@ -273,6 +277,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
