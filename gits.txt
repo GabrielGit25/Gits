@@ -47,6 +47,9 @@ git commit -m "Mensagem descritiva sobre a mudança"
 7. Enviar para o GitHub
 git push
 
+Ele substituiria o Passo 7 , mas apenas se o Passo 2 falhar .
+8. git push -f origin master
+
 
 Resolução de falha
 Commit para adicionar novo arquivo ao github ou atualizar
@@ -277,6 +280,7 @@ serão executadas com base na nova URL do repositório remoto.
 # Adicionar o novo repositório remoto
 git remote add origin <url_do_novo_repositório>
 -------------------------------------------------------------------------------------
+
 
 
 
